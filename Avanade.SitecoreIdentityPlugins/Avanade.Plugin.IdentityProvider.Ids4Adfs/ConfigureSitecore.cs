@@ -36,6 +36,7 @@ namespace Avanade.Plugin.IdentityProvider.Ids4Adfs
                 options.ClientId = identityProvider.ClientId;
                 options.ClientSecret = identityProvider.ClientSecret;
                 options.Authority = identityProvider.Authority;
+                options.SignInScheme = "idsrv.external";
                 options.ResponseType = "id_token";
                 options.CallbackPath = "/signin-adfs";
                 options.SignedOutCallbackPath = "/signout-callback-adfs";
