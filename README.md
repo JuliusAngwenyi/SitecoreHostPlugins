@@ -6,6 +6,7 @@ For background information about what is a Sitecore Host and Host Plugins, refer
 
 ## Installation
 You need to Add the Sitecore Identity NuGet Feed to Visual Studio to Build this Project
+
 Tools -> Package Manager Settings -> Package Sources
 Add the Following Feed
 (https://sitecore.myget.org/F/sc-identity/api/v3/index.json)
