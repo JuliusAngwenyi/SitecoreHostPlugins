@@ -18,7 +18,7 @@ namespace Avanade.Plugin.IdentityProvider.Ids4Demo
 
         public ConfigureSitecore(ISitecoreConfiguration scConfig, ILogger<ConfigureSitecore> logger)
         {
-            this._logger = logger;
+            this._logger      = logger;
             this._appSettings = new AppSettings();
             scConfig.GetSection(AppSettings.SectionName);
             scConfig.GetSection(AppSettings.SectionName).Bind((object)this._appSettings.Ids4DemoIdentityProvider);
@@ -32,11 +32,11 @@ namespace Avanade.Plugin.IdentityProvider.Ids4Demo
             this._logger.LogDebug("Configure '" + identityProvider.DisplayName + "'. AuthenticationScheme = " + identityProvider.AuthenticationScheme + ", ClientId = " + identityProvider.ClientId, Array.Empty<object>());
             new AuthenticationBuilder(services).AddOpenIdConnect(identityProvider.AuthenticationScheme, identityProvider.DisplayName, (Action<OpenIdConnectOptions>)(options =>
             {
-                options.SignInScheme = "idsrv.external";
-                options.ClientId = identityProvider.ClientId;
-                options.Authority = identityProvider.Authority;
+                options.SignInScheme    = "idsrv.external";
+                options.ClientId        = identityProvider.ClientId;
+                options.Authority       = identityProvider.Authority;
                 options.MetadataAddress = identityProvider.MetadataAddress;
-                options.CallbackPath = "/signin-idsrv";
+                options.CallbackPath    = "/signin-idsrv";
                 options.Events.OnRedirectToIdentityProvider += (Func<RedirectContext, Task>)(context =>
                 {
                     Claim first = context.HttpContext.User.FindFirst("idp");

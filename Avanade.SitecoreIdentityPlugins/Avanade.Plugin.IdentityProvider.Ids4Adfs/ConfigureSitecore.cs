@@ -19,7 +19,7 @@ namespace Avanade.Plugin.IdentityProvider.Ids4Adfs
 
         public ConfigureSitecore(ISitecoreConfiguration scConfig, ILogger<ConfigureSitecore> logger)
         {
-            this._logger = logger;
+            this._logger      = logger;
             this._appSettings = new AppSettings();
             scConfig.GetSection(AppSettings.SectionName);
             scConfig.GetSection(AppSettings.SectionName).Bind((object)this._appSettings.Ids4AdfsIdentityProvider);
@@ -33,14 +33,14 @@ namespace Avanade.Plugin.IdentityProvider.Ids4Adfs
             this._logger.LogDebug("Configure '" + identityProvider.DisplayName + "'. AuthenticationScheme = " + identityProvider.AuthenticationScheme + ", ClientId = " + identityProvider.ClientId, Array.Empty<object>());
             new AuthenticationBuilder(services).AddOpenIdConnect(identityProvider.AuthenticationScheme, identityProvider.DisplayName, (Action<OpenIdConnectOptions>)(options =>
             {
-                options.ClientId = identityProvider.ClientId;
-                options.ClientSecret = identityProvider.ClientSecret;
-                options.Authority = identityProvider.Authority;
-                options.SignInScheme = "idsrv.external";
-                options.ResponseType = "id_token";
-                options.CallbackPath = "/signin-adfs";
+                options.ClientId              = identityProvider.ClientId;
+                options.ClientSecret          = identityProvider.ClientSecret;
+                options.Authority             = identityProvider.Authority;
+                options.SignInScheme          = "idsrv.external";
+                options.ResponseType          = "id_token";
+                options.CallbackPath          = "/signin-adfs";
                 options.SignedOutCallbackPath = "/signout-callback-adfs";
-                options.RemoteSignOutPath = "/signout-adfs";
+                options.RemoteSignOutPath     = "/signout-adfs";
                 options.TokenValidationParameters = new TokenValidationParameters
                 {
                     NameClaimType = "name",
