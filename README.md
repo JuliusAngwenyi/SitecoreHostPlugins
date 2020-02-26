@@ -2,7 +2,7 @@
 A repository for Sitecore Host Plugins
 
 ## Intro
-For background information about what is a Sitecore Host and Host Plugins, refer to [Sitecore Host](https://doc.sitecore.com/developers/93/sitecore-experience-manager/en/sitecore-host.html)  documentation.
+For background information about what is a Sitecore Host and Host Plugins, refer to [Sitecore Host Part one](https://360agileweb.wordpress.com/2020/02/26/sitecore-host-part-one/) blog post.
 
 ## Installation
 You need to Add the Sitecore Identity NuGet Feed to Visual Studio to Build this Project
