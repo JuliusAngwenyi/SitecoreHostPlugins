@@ -4,7 +4,15 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="Config\Avanade.Plugin.IdentityProvider.Ids4Demo.xml" />
+  </ItemGroup>
+  <ItemGroup>
     <SitecorePluginContent Remove="Config\Avanade.Plugin.IdentityProvider.Ids4Demo.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\Avanade.Plugin.IdentityProvider.Ids4Demo.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>
