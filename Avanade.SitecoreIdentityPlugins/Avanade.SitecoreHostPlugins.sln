@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Avanade.Plugin.IdentityProv
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Avanade.Plugin.IdentityProvider.Ids4WsFederation", "Avanade.Plugin.IdentityProvider.Ids4WsFederation\Avanade.Plugin.IdentityProvider.Ids4WsFederation.csproj", "{9465544B-326E-42E0-A4A0-FCF8A2A8EC6C}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Avanade.Plugin.IdentityProvider.Ids4Facebook", "Avanade.Plugin.IdentityProvider.Ids4Facebook\Avanade.Plugin.IdentityProvider.Ids4Facebook.csproj", "{57E7ABF1-99ED-4934-AAAB-3A8D55379F95}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{9465544B-326E-42E0-A4A0-FCF8A2A8EC6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9465544B-326E-42E0-A4A0-FCF8A2A8EC6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9465544B-326E-42E0-A4A0-FCF8A2A8EC6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57E7ABF1-99ED-4934-AAAB-3A8D55379F95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57E7ABF1-99ED-4934-AAAB-3A8D55379F95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57E7ABF1-99ED-4934-AAAB-3A8D55379F95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57E7ABF1-99ED-4934-AAAB-3A8D55379F95}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
