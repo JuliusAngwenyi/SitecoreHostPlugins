@@ -13,7 +13,7 @@
             <!--Place transformation rules here. -->
             <ClaimsTransformation1 type="Sitecore.Plugin.IdentityProviders.DefaultClaimsTransformation, Sitecore.Plugin.IdentityProviders">
               <SourceClaims>
-                <Claim1 type="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name" />
+                <Claim1 type="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress" />
               </SourceClaims>
               <NewClaims>
                 <Claim1 type="email" />
@@ -21,30 +21,12 @@
             </ClaimsTransformation1 >
             <ClaimsTransformation2 type="Sitecore.Plugin.IdentityProviders.DefaultClaimsTransformation, Sitecore.Plugin.IdentityProviders">
               <SourceClaims>
-                <Claim1 type="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/displayname" />
+                <Claim1 type="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name" />
               </SourceClaims>
               <NewClaims>
                 <Claim1 type="name" />
               </NewClaims>
-            </ClaimsTransformation2>
-	    <!--ADFS user in specific group to Sitecore\Developer group transformation-->
-            <AzureGroupTransformation type="Sitecore.Plugin.IdentityProviders.DefaultClaimsTransformation, Sitecore.Plugin.IdentityProviders">
-              <SourceClaims>
-                <Claim1 type="http://schemas.microsoft.com/ws/2008/06/identity/claims/groups" value="[Your Source Group Object Guid]" />
-              </SourceClaims>
-              <NewClaims>
-                <Claim1 type="role" value="sitecore\Developer" />
-              </NewClaims>
-            </AzureGroupTransformation>
-            <!--ADFS user in specific group to Sitecore admin user transformation-->
-            <AzureADUserToAdminUser type="Sitecore.Plugin.IdentityProviders.DefaultClaimsTransformation, Sitecore.Plugin.IdentityProviders">
-              <SourceClaims>
-                <Claim1 type="http://schemas.microsoft.com/ws/2008/06/identity/claims/groups" value="[Your Source Group Object Guid]" />
-              </SourceClaims>
-              <NewClaims>
-                <Claim1 type="http://www.sitecore.net/identity/claims/isAdmin" value="true"/>
-              </NewClaims>
-            </AzureADUserToAdminUser>			
+            </ClaimsTransformation2>		
           </ClaimsTransformations>
         </Ids4Facebook>
       </IdentityProviders>
