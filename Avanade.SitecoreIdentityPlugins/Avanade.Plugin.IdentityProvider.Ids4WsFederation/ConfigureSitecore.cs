@@ -7,7 +7,6 @@ using Sitecore.Framework.Runtime.Configuration;
 using Avanade.Plugin.IdentityProvider.Ids4WsFederation.Configuration;
 using System;
 
-
 namespace Avanade.Plugin.IdentityProvider.Ids4WsFederation
 {
     public class ConfigureSitecore
@@ -28,7 +27,9 @@ namespace Avanade.Plugin.IdentityProvider.Ids4WsFederation
             if (!identityProvider.Enabled)
                 return;
             _logger.LogDebug("Configure '" + identityProvider.DisplayName + "'. AuthenticationScheme = " + identityProvider.AuthenticationScheme + ", MetadataAddress = " + identityProvider.MetadataAddress + ", Wtrealm = " + identityProvider.Wtrealm, Array.Empty<object>());
-            new AuthenticationBuilder(services).AddWsFederation(identityProvider.AuthenticationScheme, identityProvider.DisplayName, (Action<WsFederationOptions>)(options =>
+            new AuthenticationBuilder(services)
+                .AddWsFederation(identityProvider.AuthenticationScheme, identityProvider.DisplayName, 
+                (Action<WsFederationOptions>)(options =>
             {
                 options.SignInScheme    = "idsrv.external";
                 options.MetadataAddress = identityProvider.MetadataAddress;

@@ -10,7 +10,7 @@
           <MetadataAddress>[https://ADFS_FQDN_or_AAD_tenant/FederationMetadata/2007-06/FederationMetadata.xml]</MetadataAddress>
           <Wtrealm>[Relying Party URI set up in ADFS e.g. https://sitecore]</Wtrealm>
           <ClaimsTransformations>
-            <!--Place transformation rules here. -->
+            <!--Place your transformation rules here. -->
             <ClaimsTransformation1 type="Sitecore.Plugin.IdentityProviders.DefaultClaimsTransformation, Sitecore.Plugin.IdentityProviders">
               <SourceClaims>
                 <Claim1 type="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name" />
