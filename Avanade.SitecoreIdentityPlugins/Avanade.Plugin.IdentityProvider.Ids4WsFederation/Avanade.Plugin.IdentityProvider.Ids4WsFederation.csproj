@@ -25,7 +25,7 @@
     <PackageReference Include="Sitecore.Framework.Runtime.Abstractions" Version="6.0.0" />
     <PackageReference Include="Sitecore.Framework.Runtime.Commands" Version="6.0.0" />
     <PackageReference Include="Sitecore.Plugin.IdentityProviders" Version="2.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="3.1.5" />
   </ItemGroup>
 
 </Project>
